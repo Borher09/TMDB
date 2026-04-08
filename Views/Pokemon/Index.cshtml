@@ -1,0 +1,34 @@
+@model List<ConsumoApi.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Pokedex Simples";
+}
+
+<div class="container py-5 pokemon-page">
+    <div class="row mb-5 text-center">
+        <div class="col-12">
+            <h1 class="display-4 font-weight-bold text-shadow pokemon-title">
+                PokéDemo: Consumindo API
+            </h1>
+            <p class="lead text-muted">Abaixo estão exemplos pegos diretamente da PokéAPI via Controller.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        @if (Model != null)
+        {
+            @foreach (var pokemon in Model)
+            {
+                <div class="col-md-3 col-sm-6">
+                    @await Html.PartialAsync("_PokemonCard", pokemon)
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center alert alert-warning rounded-pill shadow-sm">
+                Nenhum Pokemon encontrado. Verifique sua conexão com a PokéAPI.
+            </div>
+        }
+    </div>
+</div>

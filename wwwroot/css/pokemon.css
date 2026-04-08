@@ -1,0 +1,62 @@
+/* --- Estilos Gerais da Página Pokemon --- */
+body.pokemon-page {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.pokemon-title {
+    background: linear-gradient(to right, #ff1c1c, #f1c40f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.text-shadow {
+    text-shadow: 2px 4px 6px rgba(0,0,0,0.05);
+}
+
+/* --- Cartão do Pokemon (Partial View) --- */
+.pokemon-card {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: none;
+    background: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.2);
+}
+
+.bg-gradient-poke {
+    background: linear-gradient(135deg, #ff1c1c 0%, #ff5c5c 100%);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.pokemon-image {
+    width: 120px;
+    height: 120px;
+    image-rendering: pixelated; /* Retro sprite look */
+    margin-top: 15px;
+}
+
+.card-title {
+    color: #333;
+    font-weight: 700;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+/* --- Estados de Alerta --- */
+.alert-pokemon {
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}

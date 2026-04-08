@@ -1,0 +1,12 @@
+@model ConsumoApi.Models.Pokemon
+
+<div class="card pokemon-card text-center mb-4">
+    <div class="card-header bg-gradient-poke text-white font-weight-bold">
+        #@Model.Id
+    </div>
+    <div class="card-body">
+        <img src="@Model.Sprites.FrontDefault" alt="@Model.Name" class="pokemon-image" />
+        <h5 class="card-title text-capitalize">@Model.Name</h5>
+    </div>
+</div>
+
